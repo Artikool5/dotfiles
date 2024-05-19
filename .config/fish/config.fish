@@ -2,8 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-fish_vi_key_bindings
-
 alias pacinst='sudo pacman -Syu'
 alias unpac='sudo pacman -R'
 alias nuke='sudo pacman -Rscn'
@@ -16,7 +14,6 @@ alias updlog='bat ~/Scripts/update_log.txt'
 # alias undnf='sudo dnf remove'
 
 alias gic='git clone'
-alias exa='eza --all --icons --group-directories-first --color always --colour-scale all --hyperlink'
 alias eza='eza --all --icons --group-directories-first --color always --colour-scale all --hyperlink'
 alias nv=nvim
 alias hx=helix
