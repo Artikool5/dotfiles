@@ -1,0 +1,19 @@
+[user]
+  name=Dyadyusha Artem
+  email=artikool5@yandex.ru
+	signingKey = /home/artikool/.ssh/id_ed25519.pub
+
+[core]
+  editor=nvim
+
+[init]
+  defaultBranch=main
+
+[gpg]
+	format = ssh
+
+[credential]
+	credentialStore = secretservice
+
+[merge]
+	tool = meld
