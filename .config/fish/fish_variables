@@ -1,6 +1,20 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR CARGO_HOME:/home/artikool/\x2elocal/share/cargo
+SETUVAR --path CUDA_CACHE_PATH:/home/artikool/\x2ecache/nv
 SETUVAR EDITOR:nvim
+SETUVAR GNUPGHOME:/home/artikool/\x2elocal/share/gnupg
+SETUVAR GTK2_RC_FILES:/home/artikool/\x2econfig/gtk\x2d2\x2e0/gtkrc
+SETUVAR HISFILE:/home/artikool/\x2elocal/state/bash/history
+SETUVAR KDEHOME:/home/artikool/\x2econfig/kde
+SETUVAR RUSTUP_HOME:/home/artikool/\x2elocal/share/rustup
+SETUVAR SCREENRC:/home/artikool/\x2econfig/screen/screenrc
+SETUVAR WINEPREFIX:/home/artikool/\x2elocal/share/wine
+SETUVAR XAUTHORITY:/run/user/1000/Xauthority
+SETUVAR XDG_CACHE_HOME:/home/artikool/\x2ecache
+SETUVAR XDG_CONFIG_HOME:/home/artikool/\x2econfig
+SETUVAR XDG_DATA_HOME:/home/artikool/\x2elocal/share
+SETUVAR XDG_STATE_HOME:/home/artikool/\x2elocal/state
 SETUVAR __done_min_cmd_duration:10000
 SETUVAR __done_notification_urgency_level:low
 SETUVAR __fish_initialized:3400
@@ -34,7 +48,7 @@ SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrbl
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline

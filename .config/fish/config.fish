@@ -48,25 +48,25 @@ alias hxconf="$EDITOR ~/.config/helix/config.toml"
 alias wget="wget --hsts-file='$XDG_DATA_HOME/wget-hsts'" # ???
 
 
-set XDG_DATA_HOME $HOME/.local/share/
-set XDG_CONFIG_HOME $HOME/.config/
-set XDG_STATE_HOME $HOME/.local/state/
-set XDG_CACHE_HOME $HOME/.cache/
+set -U XDG_DATA_HOME $HOME/.local/share
+set -U XDG_CONFIG_HOME $HOME/.config
+set -U XDG_STATE_HOME $HOME/.local/state
+set -U XDG_CACHE_HOME $HOME/.cache
 
-set HISFILE $XDG_STATE_HOME/bash/history
-set CARGO_HOME $XDG_DATA_HOME/cargo
-set CUDA_CACHE_PATH $XDG_CACHE_HOME/nv
-set GNUPGHOME $XDG_DATA_HOME/gnupg
-set SCREENRC $XDG_CONFIG_HOME/screen/screenrc
-set GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
-set KDEHOME $XDG_CONFIG_HOME/kde
-set RUSTUP_HOME $XDG_DATA_HOME/rustup
-set WINEPREFIX $XDG_DATA_HOME/wine
-set XAUTHORITY $XDG_RUNTIME_DIR/Xauthority
+set -U HISFILE $XDG_STATE_HOME/bash/history
+set -U CARGO_HOME $XDG_DATA_HOME/cargo
+set -U CUDA_CACHE_PATH $XDG_CACHE_HOME/nv
+set -U GNUPGHOME $XDG_DATA_HOME/gnupg
+set -U SCREENRC $XDG_CONFIG_HOME/screen/screenrc
+set -U GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
+set -U KDEHOME $XDG_CONFIG_HOME/kde
+set -U RUSTUP_HOME $XDG_DATA_HOME/rustup
+set -U WINEPREFIX $XDG_DATA_HOME/wine
+set -U XAUTHORITY $XDG_RUNTIME_DIR/Xauthority
 
-export MOZ_ENABLE_WAYLAND=1
-export MOZ_WEBRENDER=1
-export XDG_SESSION_TYPE=wayland
+# export MOZ_ENABLE_WAYLAND=1
+# export MOZ_WEBRENDER=1
+# export XDG_SESSION_TYPE=wayland
 
 # pnpm
 set -gx PNPM_HOME "/home/artikool/.local/share/pnpm"
