@@ -18,6 +18,7 @@ alias eza='eza --all --icons --group-directories-first --color always --colour-s
 alias nv=nvim
 alias hx=helix
 alias mkdir='mkdir -p'
+alias rm='echo `Use "trash" instead`'
 
 abbr --add xbox 'xboxdrv  \
 	--evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RZ=y2,ABS_Z=x2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y\
