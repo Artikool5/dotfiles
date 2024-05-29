@@ -19,6 +19,7 @@ alias nv=nvim
 alias hx=helix
 alias mkdir='mkdir -p'
 alias rm='echo `Use "trash" instead`'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 abbr --add xbox 'xboxdrv  \
 	--evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RZ=y2,ABS_Z=x2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y\
