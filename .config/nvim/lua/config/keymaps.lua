@@ -9,6 +9,7 @@ vim.keymap.set("i", "<C-l>", "<Esc>la")
 
 vim.keymap.set("i", ",.", "<Esc>")
 
+vim.keymap.set({ "n", "v" }, "<leader>cw", require("nvim-emmet").wrap_with_abbreviation)
 -- vim.keymap.set({ "n", "v" }, "<leader><leader>s", function()
 --   require("terminal_send").send("sml " .. vim.fn.expand("%:p") .. "\\n")
 -- end, { desc = "Run current file in SML/NJ" })
