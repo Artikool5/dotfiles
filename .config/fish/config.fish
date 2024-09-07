@@ -7,6 +7,7 @@ alias unpac='sudo pacman -R'
 alias nuke='sudo pacman -Rscn'
 alias sysupd='sudo pacman -Syyu'
 alias pacsrch='pacman -Qs'
+alias search="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse --bind 'enter:execute(pacman -Si {} | less)'"
 alias updlog='bat ~/Scripts/update_log.txt'
 
 # alias sysupd='sudo dnf update && sudo dnf upgrade'
