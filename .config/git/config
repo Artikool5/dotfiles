@@ -5,6 +5,10 @@
 
 [core]
   editor=nvim
+  pager=delta
+
+[delta]
+  navigate=true
 
 [init]
   defaultBranch=main
@@ -17,3 +21,7 @@
 
 [merge]
 	tool = meld
+  conflictstyle=diff3
+
+[diff]
+  colorMoved=default
