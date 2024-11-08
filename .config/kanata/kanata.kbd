@@ -1,0 +1,73 @@
+;; (defcfg process-unmapped-keys yes)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt comp rctl
+)
+
+(deflayer dvorak
+  grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+  tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
+  caps a    o    e    u    i    d    h    t    n    s    -    ret
+  lsft ;    q    j    k    x    b    m    w    v    z    rsft
+  lctl lmet @dnum          spc            @dsmb comp rctl
+)
+
+(deflayer dvr_numbers
+  @grv   _    _    _    _    _    _    _    _    _    _    _    _    @bspc
+  @tab   _    _    _    _    _    _    _    _    _    _    _    _    _
+  _      1    2    3    4    5    6    7    8    9    0    _    @ret
+  @rus   _    _    _    _    _    _    _    _    _    _    _
+  @rgame _    _              _              lrld _    _)
+
+(deflayer dvr_symbols
+  @grv   _    _    _    _    _    _    _    _    _    _    _    _    @bspc
+  @tab   _    S-[  [    S-9  _    _    S-0  ]    S-]  _    _    _    _
+  _      S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  =    \    _    @ret
+  @rus   _    _    _    _    _    _    _    _    _    _    _
+  @rgame _    _              _              _    _    _)
+
+(deflayer russian
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet @rnum           spc            @rsmb comp rctl
+)
+
+(deflayer rus_numbers
+  @grv   _    _    _    _    _    _    _    _    _    _    _    _    @bspc
+  @tab   _    _    _    _    _    _    _    _    _    _    _    _    _
+  _      1    2    3    4    5    6    7    8    9    0    _    @ret
+  @dvr   _    _    _    _    _    _    _    _    _    _    _
+  @dgame _    _              _              lrld _    _)
+
+(deflayer rus_symbols
+  @grv   _    _    _    _    _    _    _    _    _    _    _    _    @bspc
+  @tab   _    S-[  [    S-9  _    _    S-0  ]    S-]  _    _    _    _
+  _      S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  =    \    _    @ret
+  @dvr   _    _    _    _    _    _    _    _    _    _    _
+  @dgame _    _              _              _    _    _)
+
+(defalias
+  dnum (layer-while-held dvr_numbers)
+  rnum (layer-while-held rus_numbers)
+  dsmb (layer-while-held dvr_symbols)
+  rsmb (layer-while-held rus_symbols)
+
+  dvr (multi ( layer-switch dvorak ) M-A-k)
+  rus (multi ( layer-switch russian ) M-A-k)
+
+  dgame (layer-switch dvorak)
+  rgame (layer-switch russian)
+
+  ret (multi alt ret)
+  grv (multi alt grv)
+  bspc (multi alt bspc)
+  tab (multi alt tab)
+  )
+
+
