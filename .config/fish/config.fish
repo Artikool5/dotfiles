@@ -35,12 +35,13 @@ alias lute="z lute && source myenv/bin/activate.fish && python -m lute.main && z
 # CONFIGS
 set -U EDITOR nvim
 
-alias kittyconf="$EDITOR ~/.config/kitty/kitty.conf"
 alias fishconf="$EDITOR ~/.config/fish/config.fish"
 alias fishsrc='source ~/.config/fish/config.fish'
 alias gitconf="$EDITOR ~/.config/git/config"
 alias nvimconf="$EDITOR ~/.config/nvim/"
+alias kanataconf="$EDITOR ~/.config/kanata/kanata.kbd"
 
+alias kittyconf="$EDITOR ~/.config/kitty/kitty.conf"
 alias tmuxconf="$EDITOR ~/.config/tmux/tmux.conf"
 alias tmuxsrc="tmux source ~/.config/tmux/tmux.conf"
 alias wezconf="$EDITOR ~/.config/wezterm/wezterm.lua"
