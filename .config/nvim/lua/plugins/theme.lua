@@ -62,4 +62,22 @@ return {
       colorscheme = "catppuccin",
     },
   },
+	{
+		"rebelot/kanagawa.nvim",
+		lazy = true,
+		opts = {
+			compile = true,
+			theme = "wave", -- "wave" | "dragon"
+			background = {
+				dark = "wave",
+				light = "lotus",
+			},
+		},
+	},
+	{
+		"LazyVim/LazyVim",
+		opts = {
+			colorscheme = "kanagawa",
+		},
+	},
 }
