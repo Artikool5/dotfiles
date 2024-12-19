@@ -1,8 +1,5 @@
 return {
-  -- {
-  --   "harrisoncramer/jump-tag",
-  -- },
-  {
-    "drybalka/tree-climber.nvim",
-  },
+	{
+		"drybalka/tree-climber.nvim",
+	},
 }

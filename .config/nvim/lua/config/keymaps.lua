@@ -11,9 +11,6 @@ vim.keymap.set("i", ",.", "<Esc>")
 
 vim.keymap.set({ "n", "v" }, "<leader>cw", require("nvim-emmet").wrap_with_abbreviation)
 
-vim.keymap.set({ "n", "v" }, "<leader>rm", function()
-	require("terminal_send").send("sml " .. vim.fn.expand("%:p") .. "\\n")
-end, { desc = "Run current file in SML/NJ" })
 
 local TC = require("tree-climber")
 local keyopts = { noremap = true, silent = true }
