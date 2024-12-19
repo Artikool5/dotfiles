@@ -11,6 +11,12 @@ vim.keymap.set("i", ",.", "<Esc>")
 
 vim.keymap.set({ "n", "v" }, "<leader>cw", require("nvim-emmet").wrap_with_abbreviation)
 
+vim.keymap.set(
+	{ "n", "v" },
+	"<leader>e",
+	require("mini.files").open,
+	{ noremap = true, silent = true, desc = "Explore files" }
+)
 
 local TC = require("tree-climber")
 local keyopts = { noremap = true, silent = true }

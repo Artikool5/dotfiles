@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.opt.clipboard = "unnamedplus"
+vim.g.codeium_disable_bindings = 1
