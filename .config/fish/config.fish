@@ -22,12 +22,14 @@ alias mkdir='mkdir -p'
 alias rm='echo `Use "trash" instead`'
 alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
-abbr --add xbox 'xboxdrv  \
-	--evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RZ=y2,ABS_Z=x2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y\
-	--axismap -Y1=Y1,-Y2=Y2\
-	--evdev-keymap BTN_TOP=x,BTN_TRIGGER=y,BTN_THUMB2=a,BTN_THUMB=b,BTN_BASE3=back,BTN_BASE4=start,BTN_BASE=lt,BTN_BASE2=rt,BTN_TOP2=lb,BTN_PINKIE=rb,BTN_BASE5=tl,BTN_BASE6=tr \
-	--mimic-xpad --silent --deadzone 55\
-  --evdev /dev/input/event'
+function xbox
+    xboxdrv \
+        --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RZ=y2,ABS_Z=x2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y \
+        --axismap -Y1=Y1,-Y2=Y2 \
+        --evdev-keymap BTN_TOP=x,BTN_TRIGGER=y,BTN_THUMB2=a,BTN_THUMB=b,BTN_BASE3=back,BTN_BASE4=start,BTN_BASE=lt,BTN_BASE2=rt,BTN_TOP2=lb,BTN_PINKIE=rb,BTN_BASE5=tl,BTN_BASE6=tr \
+        --mimic-xpad --silent --deadzone 55 \
+        --evdev /dev/input/event$argv[1]
+end
 
 alias reflect="sudo reflector --country 'Germany,Russia' --sort rate --verbose --fastest 15 --save /etc/pacman.d/mirrorlist"
 alias lute="z lute && source myenv/bin/activate.fish && python -m lute.main && z"
