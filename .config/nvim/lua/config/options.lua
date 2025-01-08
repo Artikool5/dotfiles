@@ -4,3 +4,4 @@
 
 vim.opt.clipboard = "unnamedplus"
 vim.g.codeium_disable_bindings = 1
+vim.g.lazyvim_rust_diagnostics = "bacon-ls"
