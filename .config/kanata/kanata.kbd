@@ -14,16 +14,7 @@
   tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
   caps a    o    e    u    i    d    h    t    n    s    -    ret
   lsft ;    q    j    k    x    b    m    w    v    z    rsft      up       
-  lctl lmet @dnum          spc            @dsmb comp rctl     left down rght
-)
-
-(deflayer dvr_numbers
-         @f1  @f2  @f3  @f4  @f5  @f6  @f7  @f8  @f9  @f10 @f11 @f12
-  @grv   _    _    _    _    _    _    _    _    _    _    _    _    @bspc
-  @tab   _    S-[  [    S-9  _    _    S-0  ]    S-]  _    _    _    _
-  _      1    2    3    4    5    6    7    8    9    0    _    @ret
-  @rus   _    _    _    _    _    _    _    _    _    _    _         @up       
-  @rgame _    _              _              lrld _    _         @lft @dwn @rght
+  lctl lmet lalt          spc            @dsmb comp rctl     left down rght
 )
 
 (deflayer dvr_symbols
@@ -41,16 +32,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft      up       
-  lctl lmet @rnum           spc            @rsmb comp rctl    left down rght
-)
-
-(deflayer rus_numbers
-         @f1  @f2  @f3  @f4  @f5  @f6  @f7  @f8  @f9  @f10 @f11 @f12
-  @grv   _    _    _    _    _    _    _    _    _    _    _    _    @bspc
-  @tab   _    S-[  [    S-9  _    _    S-0  ]    S-]  _    _    _    _
-  _      1    2    3    4    5    6    7    8    9    0    _    @ret
-  @dvr   _    _    _    _    _    _    _    _    _    _    _         @up       
-  @dgame _    _              _              lrld _    _         @lft @dwn @rght
+  lctl lmet lalt           spc            @rsmb comp rctl    left down rght
 )
 
 (deflayer rus_symbols
@@ -63,8 +45,6 @@
 )
 
 (defalias
-  dnum (layer-while-held dvr_numbers)
-  rnum (layer-while-held rus_numbers)
   dsmb (layer-while-held dvr_symbols)
   rsmb (layer-while-held rus_symbols)
 
