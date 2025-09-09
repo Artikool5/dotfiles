@@ -22,6 +22,42 @@ return {
 			},
 		},
 	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		opts = {
+			ensure_installed = {
+				-- Shells
+				"bash",
+				"fish",
+
+				-- Web
+				"javascript",
+				"typescript",
+				"html",
+				"css",
+				"csv",
+				"graphql",
+				"http",
+
+				-- ???
+				"c",
+				"make",
+				"cpp",
+
+				-- configs
+				"lua",
+				"luadoc",
+				"json",
+				"jsdoc",
+				"yaml",
+				"toml",
+				"ini",
+				"xml",
+
+				-- extra?
+				"markdown",
+				"markdown_inline",
+				"regex",
 			},
 		},
 	},
