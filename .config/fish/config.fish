@@ -45,7 +45,6 @@ alias wezconf="$EDITOR ~/.config/wezterm/wezterm.lua"
 alias hyprconf="$EDITOR ~/.config/hypr/hyprland.conf"
 alias alaconf="$EDITOR ~/.config/alacritty/alacritty.toml"
 alias hxconf="$EDITOR ~/.config/helix/config.toml"
-alias wget="wget --hsts-file='$XDG_DATA_HOME/wget-hsts'" # ???
 
 
 set -U XDG_DATA_HOME $HOME/.local/share
