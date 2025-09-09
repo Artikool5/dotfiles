@@ -46,6 +46,26 @@ alias hyprconf="$EDITOR ~/.config/hypr/hyprland.conf"
 alias alaconf="$EDITOR ~/.config/alacritty/alacritty.toml"
 alias hxconf="$EDITOR ~/.config/helix/config.toml"
 
+function convert_audio
+    if test (count $argv) -ne 1
+        echo "Usage: convert_audio EXTENSION"
+        return 1
+    end
+
+    set ext $argv[1]
+    for f in *.$ext
+        set output (string replace -r "\.$ext\$" '.opus' "$f")
+        ffmpeg -n -i "$f" -c:a libopus -vbr on -b:a 64k "$output"
+        echo $status
+        if test $status -eq 0
+            trash "$f"
+        end
+    end
+end
+
+function get-asmr
+    cd "/home/artikool/sda Backup/ASMR" && yt-dlp --cookies-from-browser firefox -x --no-playlist "$argv[1]" && convert_audio m4a && cd -
+end
 
 set -U XDG_DATA_HOME $HOME/.local/share
 set -U XDG_CONFIG_HOME $HOME/.config
