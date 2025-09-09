@@ -10,10 +10,6 @@ alias pacsrch='pacman -Qs'
 alias search="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse --bind 'enter:execute(pacman -Si {} | less)'"
 alias updlog='bat ~/Scripts/update_log.txt'
 
-# alias sysupd='sudo dnf update && sudo dnf upgrade'
-# alias dnfi='sudo dnf install'
-# alias undnf='sudo dnf remove'
-
 alias gic='git clone'
 alias eza='eza --all --icons --group-directories-first --color always --colour-scale all --hyperlink'
 alias nv=nvim
