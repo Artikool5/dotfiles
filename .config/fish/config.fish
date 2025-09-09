@@ -63,10 +63,6 @@ set -U RUSTUP_HOME $XDG_DATA_HOME/rustup
 set -U WINEPREFIX $XDG_DATA_HOME/wine
 set -U XAUTHORITY $XDG_RUNTIME_DIR/Xauthority
 
-# export MOZ_ENABLE_WAYLAND=1
-# export MOZ_WEBRENDER=1
-# export XDG_SESSION_TYPE=wayland
-
 # pnpm
 set -gx PNPM_HOME "/home/artikool/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
