@@ -15,7 +15,6 @@ alias ez='eza --all --icons --group-directories-first --color --hyperlink'
 alias nv=nvim
 alias hx=helix
 alias mkdir='mkdir -p'
-alias rm='echo `Use "trash" instead`'
 alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 function xbox
