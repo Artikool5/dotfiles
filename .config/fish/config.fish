@@ -35,7 +35,7 @@ set -U EDITOR nvim
 alias fishconf="$EDITOR ~/.config/fish/config.fish"
 alias fishsrc='source ~/.config/fish/config.fish'
 alias gitconf="$EDITOR ~/.config/git/config"
-alias nvimconf="$EDITOR ~/.config/nvim/"
+alias nvimconf="z nvim &&$EDITOR ~/.config/nvim/ &&cd -"
 alias kanataconf="$EDITOR ~/.config/kanata/kanata.kbd"
 
 alias kittyconf="$EDITOR ~/.config/kitty/kitty.conf"
