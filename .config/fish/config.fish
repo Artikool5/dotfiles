@@ -11,7 +11,7 @@ alias search="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse --bin
 alias updlog='bat ~/Scripts/update_log.txt'
 
 alias gic='git clone'
-alias eza='eza --all --icons --group-directories-first --color always --colour-scale all --hyperlink'
+alias ez='eza --all --icons --group-directories-first --color --hyperlink'
 alias nv=nvim
 alias hx=helix
 alias mkdir='mkdir -p'
