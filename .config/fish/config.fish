@@ -1,17 +1,16 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    set MANPAGER 'nvim +Man!'
+    set -g fish_greeting
 end
 
-alias pacinst='sudo pacman -Syu'
-alias unpac='sudo pacman -R'
-alias nuke='sudo pacman -Rscn'
-alias sysupd='sudo pacman -Syyu'
-alias pacsrch='pacman -Qs'
-alias search="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse --bind 'enter:execute(pacman -Si {} | less)'"
+set -g PATH $HOME/.local/bin/ $PATH
+
 alias updlog='bat ~/Scripts/update_log.txt'
 
 alias gic='git clone'
 alias ez='eza --all --icons --group-directories-first --color --hyperlink'
+alias ezl='ez --long'
 alias nv=nvim
 alias hx=helix
 alias mkdir='mkdir -p'
@@ -30,21 +29,17 @@ alias reflect="sudo reflector --country 'Germany,Russia' --sort rate --verbose -
 alias lute="z lute && source myenv/bin/activate.fish && python -m lute.main && z"
 
 # CONFIGS
-set -U EDITOR nvim
+set EDITOR nvim
+alias nvtest 'NVIM_APPNAME="nvim-test" nvim'
 
 alias fishconf="$EDITOR ~/.config/fish/config.fish"
 alias fishsrc='source ~/.config/fish/config.fish'
 alias gitconf="$EDITOR ~/.config/git/config"
+alias sshconf='~/.ssh/config'
 alias nvimconf="z nvim &&$EDITOR ~/.config/nvim/ &&cd -"
 alias kanataconf="$EDITOR ~/.config/kanata/kanata.kbd"
-
 alias kittyconf="$EDITOR ~/.config/kitty/kitty.conf"
-alias tmuxconf="$EDITOR ~/.config/tmux/tmux.conf"
-alias tmuxsrc="tmux source ~/.config/tmux/tmux.conf"
-alias wezconf="$EDITOR ~/.config/wezterm/wezterm.lua"
 alias hyprconf="$EDITOR ~/.config/hypr/hyprland.conf"
-alias alaconf="$EDITOR ~/.config/alacritty/alacritty.toml"
-alias hxconf="$EDITOR ~/.config/helix/config.toml"
 
 function convert_audio
     if test (count $argv) -ne 1
@@ -63,28 +58,12 @@ function convert_audio
     end
 end
 
-function get-asmr
-    cd "/home/artikool/sda Backup/ASMR" && yt-dlp --cookies-from-browser firefox -x --no-playlist "$argv[1]" && convert_audio m4a && cd -
+function get-audio
+    cd "/mnt/Windows/sda Backup/ASMR/" && yt-dlp --cookies-from-browser firefox -x --no-playlist "$argv[1]" && convert_audio m4a && cd -
 end
 
-set -U XDG_DATA_HOME $HOME/.local/share
-set -U XDG_CONFIG_HOME $HOME/.config
-set -U XDG_STATE_HOME $HOME/.local/state
-set -U XDG_CACHE_HOME $HOME/.cache
-
-set -U HISFILE $XDG_STATE_HOME/bash/history
-set -U CARGO_HOME $XDG_DATA_HOME/cargo
-set -U CUDA_CACHE_PATH $XDG_CACHE_HOME/nv
-set -U GNUPGHOME $XDG_DATA_HOME/gnupg
-set -U SCREENRC $XDG_CONFIG_HOME/screen/screenrc
-set -U GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
-set -U KDEHOME $XDG_CONFIG_HOME/kde
-set -U RUSTUP_HOME $XDG_DATA_HOME/rustup
-set -U WINEPREFIX $XDG_DATA_HOME/wine
-set -U XAUTHORITY $XDG_RUNTIME_DIR/Xauthority
-
 # pnpm
-set -gx PNPM_HOME "/home/artikool/.local/share/pnpm"
+set -gx PNPM_HOME "/home/artem/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
@@ -92,4 +71,3 @@ end
 
 zoxide init fish | source
 starship init fish | source
-nvm use lts
