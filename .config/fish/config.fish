@@ -67,6 +67,10 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
+if not string match -q -- $CARGO_HOME/bin/ $PATH
+    set -gx PATH $CARGO_HOME/bin/ $PATH
+end
+
 if not string match -q -- $HOME/.local/bin/ $PATH
     set -gx PATH $HOME/.local/bin/ $PATH
 end
