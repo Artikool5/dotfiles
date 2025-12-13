@@ -4,8 +4,6 @@ if status is-interactive
     set -g fish_greeting
 end
 
-set -g PATH $HOME/.local/bin/ $PATH
-
 alias updlog='bat ~/Scripts/update_log.txt'
 
 alias gic='git clone'
@@ -68,6 +66,10 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+if not string match -q -- $HOME/.local/bin/ $PATH
+    set -gx PATH $HOME/.local/bin/ $PATH
+end
 
 zoxide init fish | source
 starship init fish | source
