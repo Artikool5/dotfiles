@@ -6,6 +6,7 @@ end
 
 alias updlog='bat ~/Scripts/update_log.txt'
 
+alias yy=yazi
 alias gic='git clone'
 alias ez='eza --all --icons --group-directories-first --color --hyperlink'
 alias ezl='ez --long'
