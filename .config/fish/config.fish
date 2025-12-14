@@ -29,6 +29,7 @@ alias lute="z lute && source myenv/bin/activate.fish && python -m lute.main && z
 
 # CONFIGS
 set EDITOR nvim
+set -x SUDO_EDITOR nvim
 alias nvtest 'NVIM_APPNAME="nvim-test" nvim'
 
 alias fishconf="$EDITOR ~/.config/fish/config.fish"
