@@ -2,6 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     set MANPAGER 'nvim +Man!'
     set -g fish_greeting
+    set -gx BAT_THEME "Catppuccin Mocha"
 end
 
 alias updlog='bat ~/Scripts/update_log.txt'
