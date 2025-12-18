@@ -29,7 +29,7 @@ alias reflect="sudo reflector --country 'Germany,Russia' --sort rate --verbose -
 alias lute="z lute && source myenv/bin/activate.fish && python -m lute.main && z"
 
 # CONFIGS
-set EDITOR nvim
+set -x EDITOR nvim
 set -x SUDO_EDITOR nvim
 alias nvtest 'NVIM_APPNAME="nvim-test" nvim'
 
