@@ -42,6 +42,15 @@ alias kanataconf="$EDITOR ~/.config/kanata/kanata.kbd"
 alias kittyconf="$EDITOR ~/.config/kitty/kitty.conf"
 alias hyprconf="$EDITOR ~/.config/hypr/hyprland.conf"
 
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	command yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
+
 function convert_audio
     if test (count $argv) -ne 1
         echo "Usage: convert_audio EXTENSION"
@@ -60,7 +69,7 @@ function convert_audio
 end
 
 function get-audio
-    cd "/mnt/Windows/sda Backup/ASMR/" && yt-dlp --cookies-from-browser firefox -x --no-playlist "$argv[1]" && convert_audio m4a && cd -
+    cd "/mnt/Windows/Музыка/ASMR/" && yt-dlp --cookies-from-browser firefox -x --no-playlist "$argv[1]" && convert_audio m4a && cd -
 end
 
 # pnpm
