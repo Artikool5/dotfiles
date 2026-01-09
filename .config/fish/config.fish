@@ -12,6 +12,8 @@ alias gic='git clone'
 alias ez='eza --all --icons --group-directories-first --color --hyperlink'
 alias ezl='ez --long'
 alias nv=nvim
+alias vim=nvim
+alias vi=nvim
 alias hx=helix
 alias mkdir='mkdir -p'
 alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
@@ -31,6 +33,7 @@ alias lute="z lute && source myenv/bin/activate.fish && python -m lute.main && z
 # CONFIGS
 set -x EDITOR nvim
 set -x SUDO_EDITOR nvim
+set -x VISUAL_EDITOR kwrite
 alias nvtest 'NVIM_APPNAME="nvim-test" nvim'
 
 alias fishconf="$EDITOR ~/.config/fish/config.fish"
