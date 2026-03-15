@@ -19,6 +19,11 @@ alias hx=helix
 alias mkdir='mkdir -p'
 alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
+set ping_IP "8.8.8.8"
+alias pingi="ping $ping_IP"
+alias ping1="ping -c 10 $ping_IP"
+alias ping2="ping -c 25 $ping_IP"
+
 function xbox
     xboxdrv \
         --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RZ=y2,ABS_Z=x2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y \
