@@ -1,0 +1,105 @@
+(defcfg
+ ;; process-unmapped-keys (all-except f19 f20)
+  process-unmapped-keys yes
+  delegate-to-first-layer yes
+  linux-device-detect-mode keyboard-only
+)
+
+(defsrc  
+         f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    caps a    s    d    f    g    h    j    k    l    ;    '    ret
+    lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
+    lctl lmet lalt           spc            ralt comp rctl      left down rght
+)
+
+#|
+  Что хочу чтобы было:
+    - 2 раскладки: sturdy + russian
+    - Переключаться между ними
+      + Необходимо переключение системной раскладки M-A-k
+    - Переключаться на qwerty для игр
+      + Переключение системной раскладки необходимо только русской раскладке
+      но не английской sturdy
+    - Переключаться с qwerty на предыдущую
+      + То же самое только в обратную сторону
+      + нужна переменная помнящая прошлую раскладку
+      + либо морочиться самому с правильным расположением макро
+
+  Идеи на будущее
+    - Home-row mod keys (Super, Shift, Ctrl, Alt) при помощи tap-hold-press:
+      https://jtroo.github.io/config.html#tap-hold
+    - Если получится Home-row mods - можно поставить еще один слой на шифт
+    - Сделать одну из кнопок - дублирующей для двойных букв (нн, tt, rr, ...)
+      https://jtroo.github.io/config.html#repeat-key
+|#
+
+(defalias
+  prg (layer-while-held programming)
+
+  str (multi (layer-switch sturdy) M-A-C-e)
+  qwr (multi (layer-switch qwerty) M-A-C-e)   ;; e = english
+  ru  (multi (layer-switch qwerty) M-A-C-r)   ;; r = russian
+
+  switch_layout (switch 
+    ((base-layer sturdy)) @ru break 
+    ((base-layer qwerty)) @str break 
+    ((base-layer russian)) @str break 
+  )
+
+  lalt (tap-hold-press 200 200 @switch_layout lalt)
+)
+
+(deflayer sturdy
+         f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab  v    m    l    c    p    x    f    o    u    j    [    ]    \
+    caps s    t    r    d    y    .    n    a    e    i    /    ret
+    lsft k    q    g    w    z    b    h    '    ;    ,    rsft      up
+    lctl lmet @lalt           spc            @prg comp rctl      left down rght
+)
+
+(deflayer russian  
+         f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    caps a    s    d    f    g    h    j    k    l    ;    '    ret
+    lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
+    lctl lmet @lalt           spc            @prg comp rctl      left down rght
+)
+
+(deflayer qwerty  
+         f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    caps a    s    d    f    g    h    j    k    l    ;    '    ret
+    lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
+    lctl lmet @lalt           spc            @prg comp rctl      left down rght
+)
+
+
+(defalias
+  { S-[
+  } S-]
+  < S-,
+  > S-.
+  _ S--
+  ? S-/
+  : S-;
+  | S-\
+  & S-7
+  2xeq (macro = =)
+  3xeq (macro = = =)
+
+  ;; S-9/S-0 == (/)
+)
+
+(deflayer programming
+         _    @qwr  lrld  _    _    _    _    _    _    _    _    _       ;; f1-f12
+    _    _    _     _     _    _    _    _    _    _    _    _    _    _  ;; numbers
+    _    @<   @{    [     S-9  _    _    S-0  ]    @}   @>   _    _    _
+    _    =    @2xeq @3xeq @|   @&   -    h    j    k    l    _    _
+    _    _    _     _     _    _    _    _    `    _    _    _         _
+    _    _    _                @_             _    _    _         _    _    _
+)

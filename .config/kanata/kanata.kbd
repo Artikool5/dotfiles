@@ -45,12 +45,15 @@
 )
 
 (defalias
+  ;; Symbol layers
   dsmb (layer-while-held dvr_symbols)
   rsmb (layer-while-held rus_symbols)
 
+  ;; Switch system layout
   dvr (multi ( layer-switch dvorak ) M-A-k)
   rus (multi ( layer-switch russian ) M-A-k)
 
+  ;; Switch Kanata between current layout and QWERTY
   dgame (layer-switch dvorak)
   rgame (layer-switch russian)
 
@@ -79,3 +82,20 @@
   )
 
 
+(deflayer full_template
+         _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _         _
+    _    _    _              _              _    _    _         _    _    _
+)
+
+(deflayer symbol_template
+         f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+    grv  1    2    3    4    5    6    7    8    9    0    _    _    bspc
+    tab  _    _    _    _    _    _    _    _    _    _    _    _    _
+    caps _    _    _    _    _    _    _    _    _    _    _    ret
+    lsft _    _    _    _    _    _    _    _    _    _    rsft      up
+    lctl lmet lalt           spc            ralt comp rctl      left down rght
+)
