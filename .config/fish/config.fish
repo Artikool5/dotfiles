@@ -92,6 +92,19 @@ function get-audio
     cd "/mnt/Windows/Музыка/ASMR/" && yt-dlp --cookies-from-browser firefox -x --no-playlist "$argv[1]" && convert_audio m4a && cd -
 end
 
+function clean_cache_arch
+    echo "Cleaning pacman cache (keep last version)..."
+    sudo paccache -rk1
+
+    echo "Removing cache of uninstalled packages..."
+    sudo paccache -ruk0
+
+    echo "Removing leftover build directories..."
+    rm -rf ~/.cache/paru/clone/*
+
+    echo "Done."
+end
+
 # pnpm
 set -gx PNPM_HOME "/home/artem/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
