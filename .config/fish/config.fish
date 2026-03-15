@@ -88,7 +88,7 @@ function convert_audio
     end
 end
 
-function get-audio
+function get_audio
     cd "/mnt/Windows/Музыка/ASMR/" && yt-dlp --cookies-from-browser firefox -x --no-playlist "$argv[1]" && convert_audio m4a && cd -
 end
 
