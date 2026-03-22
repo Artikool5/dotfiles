@@ -11,7 +11,7 @@
     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
     caps a    s    d    f    g    h    j    k    l    ;    '    ret
     lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
-    lctl lmet lalt           spc            ralt comp rctl      left down rght
+    lctl lmet lalt           spc            ralt menu rctl      left down rght
 )
 
 #|
@@ -57,7 +57,7 @@
     tab  v    m    l    c    p    x    f    o    u    j    [    ]    \
     caps s    t    r    d    y    .    n    a    e    i    /    ret
     lsft k    q    g    w    z    b    h    '    ;    ,    rsft      up
-    lctl lmet @lalt           spc            @prg comp rctl      left down rght
+    lctl lmet @lalt           spc            @prg menu rctl      left down rght
 )
 
 (deflayer russian  
@@ -66,7 +66,7 @@
     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
     caps a    s    d    f    g    h    j    k    l    ;    '    ret
     lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
-    lctl lmet @lalt           spc            @prg comp rctl      left down rght
+    lctl lmet @lalt           spc            @prg menu rctl      left down rght
 )
 
 (deflayer qwerty  
@@ -75,7 +75,7 @@
     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
     caps a    s    d    f    g    h    j    k    l    ;    '    ret
     lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
-    lctl lmet @lalt           spc            @prg comp rctl      left down rght
+    lctl lmet @lalt           spc            @prg menu rctl      left down rght
 )
 
 
