@@ -14,27 +14,6 @@
     lctl lmet lalt           spc            ralt menu rctl      left down rght
 )
 
-#|
-  Что хочу чтобы было:
-    - 2 раскладки: sturdy + russian
-    - Переключаться между ними
-      + Необходимо переключение системной раскладки M-A-k
-    - Переключаться на qwerty для игр
-      + Переключение системной раскладки необходимо только русской раскладке
-      но не английской sturdy
-    - Переключаться с qwerty на предыдущую
-      + То же самое только в обратную сторону
-      + нужна переменная помнящая прошлую раскладку
-      + либо морочиться самому с правильным расположением макро
-
-  Идеи на будущее
-    - Home-row mod keys (Super, Shift, Ctrl, Alt) при помощи tap-hold-press:
-      https://jtroo.github.io/config.html#tap-hold
-    - Если получится Home-row mods - можно поставить еще один слой на шифт
-    - Сделать одну из кнопок - дублирующей для двойных букв (нн, tt, rr, ...)
-      https://jtroo.github.io/config.html#repeat-key
-|#
-
 (defalias
   prg (layer-while-held programming)
 
