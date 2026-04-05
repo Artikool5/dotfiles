@@ -17,16 +17,14 @@
 (defalias
   prg (layer-while-held programming)
 
-  str (multi (layer-switch sturdy) M-A-C-e)
   grp (multi (layer-switch graphyre) M-A-C-e)
   qwr (multi (layer-switch qwerty) M-A-C-e)   ;; e = english
   ru  (multi (layer-switch qwerty) M-A-C-r)   ;; r = russian
 
   switch_layout (switch 
-    ((base-layer sturdy)) @ru break 
-    ((base-layer graphyre)) @str break 
-    ((base-layer qwerty)) @str break 
-    ((base-layer russian)) @str break 
+    ((base-layer graphyre)) @ru break 
+    ((base-layer qwerty)) @grp break 
+    ((base-layer russian)) @grp break 
   )
 
   magic-key
@@ -36,7 +34,7 @@
     ((key-history g 1)) s break  ;; g* -> gs
     ((key-history w 1)) s break  ;; w* -> ws
     ((key-history c 1)) s break  ;; c* -> cs
-    ((key-history p 1)) r break  ;; p* -> pl
+    ((key-history p 1)) r break  ;; p* -> pr
     ((key-history b 1)) l break  ;; b* -> bl
     ((key-history q 1)) u break  ;; q* -> qu
     ((key-history y 1)) e break  ;; y* -> ye
@@ -45,15 +43,6 @@
   mgc @magic-key
 
   lalt (tap-hold-press 200 200 @switch_layout lalt)
-)
-
-(deflayer sturdy
-         f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-    tab  v    m    l    c    p    x    f    o    u    j    [    ]    \
-    caps s    t    r    d    y    .    n    a    e    i    /    ret
-    lsft k    q    g    w    z    b    h    '    ;    ,    rsft      up
-    lctl lmet @lalt           spc            @prg menu rctl      left down rght
 )
 
 (deflayer graphyre
@@ -104,7 +93,7 @@
 )
 
 (deflayer programming
-         _    @qwr  lrld  _    _    _    _    _    _    _    _    @grp    ;; f1-f12
+         _    @qwr  lrld  _    _    _    _    _    _    _    _    _    ;; f1-f12
     _    _    _     _     _    _    _    _    _    _    _    _    _    _  ;; numbers
     _    @<   @{    [     S-9  @%   @@   S-0  ]    @}   @>   _    _    _
     _    =    @2xeq @3xeq @&   @|   -    h    j    k    l    @+   _
