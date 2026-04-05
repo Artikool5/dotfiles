@@ -47,7 +47,7 @@ alias fishsrc='source ~/.config/fish/config.fish'
 alias gitconf="$EDITOR ~/.config/git/config"
 alias sshconf="$EDITOR ~/.ssh/config"
 alias nvimconf="z nvim &&$EDITOR ~/.config/nvim/ &&cd -"
-alias kanataconf="$EDITOR ~/.config/kanata/kanata.kbd"
+alias kanataconf="$EDITOR ~/.config/kanata/"
 alias kittyconf="$EDITOR ~/.config/kitty/kitty.conf"
 alias hyprconf="$EDITOR ~/.config/hypr/hyprland.conf"
 
