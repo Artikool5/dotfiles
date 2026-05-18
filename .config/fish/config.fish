@@ -52,7 +52,7 @@ alias kittyconf="$EDITOR ~/.config/kitty/kitty.conf"
 alias hyprconf="$EDITOR ~/.config/hypr/hyprland.conf"
 
 function kanataconf_commit 
-  set layout ( fd . .config/kanata/ |  xargs basename -s .kbd | fzf | xargs -IXX fd -a XX .config/kanata/ )
+  set layout ( fd . ~/.config/kanata/ |  xargs basename -s .kbd | fzf | xargs -IXX fd -a XX ~/.config/kanata/ )
   sudo cp $layout /etc/kanata/kanata-config.kbd
   sudo systemctl restart kanata.service
 end
