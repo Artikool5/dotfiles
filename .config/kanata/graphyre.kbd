@@ -38,6 +38,7 @@
     ((key-history b 1)) l break  ;; b* -> bl
     ((key-history q 1)) u break  ;; q* -> qu
     ((key-history y 1)) e break  ;; y* -> ye
+    ((key-history . 1)) / break  ;; .* -> ./
     ()                  y break  ;; default -> y
   )
   mgc @magic-key
