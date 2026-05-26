@@ -33,7 +33,7 @@ function xbox
         --evdev /dev/input/event$argv[1]
 end
 
-alias reflect="sudo reflector --country 'Germany,Russia' --sort rate --verbose --fastest 15 --save /etc/pacman.d/mirrorlist"
+alias reflect_custom="sudo reflector --country 'Germany,Russia' --sort rate --verbose --fastest 15 --save /etc/pacman.d/mirrorlist"
 alias lute="z lute && source myenv/bin/activate.fish && python -m lute.main && z"
 
 # CONFIGS
