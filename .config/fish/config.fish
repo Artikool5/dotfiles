@@ -6,6 +6,11 @@ if status is-interactive
     set -gx BAT_THEME "Catppuccin Mocha"
 end
 
+alias ea_toggle "com.github.wwmm.easyeffects --bypass 1 && com.github.wwmm.easyeffects --bypass 2"
+function files2clipboard
+    bat --style header --decorations always $argv | fish_clipboard_copy
+end
+
 alias updlog='bat ~/Scripts/update_log.txt'
 
 alias yy=yazi
