@@ -6,6 +6,7 @@
 vim.g.autoformat = false
 
 vim.o.relativenumber = false
+vim.o.shiftwidth = 4
 vim.o.tildeop = true
 vim.o.inccommand = "split"
 vim.o.previewheight = 20
