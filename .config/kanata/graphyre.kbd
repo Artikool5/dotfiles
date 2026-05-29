@@ -38,19 +38,22 @@
     ((key-history b 1)) l break  ;; b* -> bl
     ((key-history q 1)) u break  ;; q* -> qu
     ((key-history y 1)) e break  ;; y* -> ye
+    ((key-history u 1)) e break  ;; u* -> ue
+    ((key-history x 1)) t break  ;; x* -> xt
     ((key-history . 1)) / break  ;; .* -> ./
     ()                  y break  ;; default -> y
   )
   mgc @magic-key
 
   lalt (tap-hold-press 200 200 @switch_layout lalt)
+  cctl (tap-hold-press 200 200 esc lctl)
 )
 
 (deflayer graphyre
          f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
     grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
     tab  p    l    d    w    z    j    f    o    u    ,    ;    ]    \
-    caps n    r    t    s    g    @mgc h    a    e    i    /    ret
+    @cctl n    r    t    s    g    @mgc h    a    e    i    /    ret
     lsft q    x    b    c    v    k    m    '    y    .    rsft      up
     lctl lmet @lalt           spc            @prg menu rctl      left down rght
 )
@@ -59,7 +62,7 @@
          f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
     grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-    caps a    s    d    f    g    h    j    k    l    ;    '    ret
+    @cctl a    s    d    f    g    h    j    k    l    ;    '    ret
     lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
     lctl lmet @lalt           spc            @prg menu rctl      left down rght
 )
@@ -97,8 +100,8 @@
 (deflayer programming
          _    @qwr  lrld  _    _    _    _    _    _    _    _    _       ;; f1-f12
     _    _    _     _     _    _    _    _    _    _    _    _    _    _  ;; numbers
-    `    @<   @{    [     S-9  @#   _    S-0  ]    @}   @>   _    @@   _
+    `    @<   @{    [     S-9  @#   _    S-0  ]    @}   @>   @:   @@   _
     @^   @&   @|    @*    =    -    @+   h    j    k    l    @?   _
-    _    @!   @$    @qt   .    _    @%   /    \    @:   @~   _         _
-    _    _    @_               _              _    _    _         _    _    _
+    _    @!   @$    @_    .    _    @%   /    \    @~   _    _         _
+    _    _    _                _              _    _    _         _    _    _
 )
