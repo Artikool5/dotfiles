@@ -10,6 +10,7 @@ vim.o.shiftwidth = 4
 vim.o.tildeop = true
 vim.o.inccommand = "split"
 vim.o.previewheight = 20
+vim.o.winborder = "rounded"
 
 vim.o.langmap =
   "йp,цl,уd,кw,еz,нj,гf,шo,щu,з\\,,х\\;,ъ]," ..
