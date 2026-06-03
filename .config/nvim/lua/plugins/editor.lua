@@ -1,6 +1,6 @@
 return {
   { "folke/flash.nvim", opts = {
-    labels = "aoeuhtnsidpgcrlqjkvwmbxyfz",
+    labels = "nrtshaeibmwoduluzfxqyp",
   } },
   {
     "barrett-ruth/live-server.nvim",
@@ -26,38 +26,43 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        -- Shells
-        "bash",
+        -- Languages
         "fish",
-
-        -- Web
-        "javascript",
-        "typescript",
+        "bash",
+        "asm",
+        "c",
+        "cpp",
         "html",
         "css",
-        "csv",
+        "javascript",
+        "tsx",
         "graphql",
-        "http",
-
-        -- ???
-        "c",
-        "make",
-        "cpp",
-
-        -- configs
         "lua",
-        "luadoc",
-        "json",
-        "jsdoc",
-        "yaml",
-        "toml",
-        "ini",
-        "xml",
-
-        -- extra?
         "markdown",
-        "markdown_inline",
-        "regex",
+        "odin",
+        "sql",
+
+        -- Configs
+        "desktop",
+        "dockerfile",
+        "dot",
+        "git_config",
+        "make",
+        "cmake",
+        "toml",
+        "yaml",
+        "json",
+        "ini",
+        "kitty",
+
+        -- Misc / Other
+        "doxygen",
+        "comment",
+        "disassembly",
+        "git_rebase",
+        "luadoc",
+        "http",
+        "objdump",
       },
     },
   },
