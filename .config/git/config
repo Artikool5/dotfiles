@@ -1,7 +1,7 @@
 [user]
   name=Dyadyusha Artem
   email=artikool5@yandex.ru
-	signingkey = BCAB6FA1B71C9631
+	signingkey = ~/.ssh/id_ed25519.pub
 
 [core]
   editor=nvim
