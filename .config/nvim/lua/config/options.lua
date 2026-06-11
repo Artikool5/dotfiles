@@ -4,6 +4,7 @@
 
 -- formatting on save
 vim.g.autoformat = false
+vim.g.snacks_animate = false
 
 vim.o.relativenumber = false
 vim.o.shiftwidth = 4
