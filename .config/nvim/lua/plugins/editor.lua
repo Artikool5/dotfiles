@@ -13,19 +13,7 @@ return {
     -- Stick to stable version to get binaries for faster fuzzy matching
     version = "*",
     opts = {
-      completion = {
-        -- trigger = { show_on_keyword = false, show_on_trigger_character = false },
-        -- menu = {
-        --   auto_show = false,
-        --   auto_show_delay_ms = 0,
-        -- },
-        list = {
-          selection = {
-            preselect = false,
-            auto_insert = true,
-          },
-        },
-      },
+      keymap = { preset = "default" },
     },
   },
   {
